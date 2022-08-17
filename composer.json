@@ -1,0 +1,16 @@
+{
+    "name": "capiflex/php-sagecloud",
+    "description": "PHP package for easy integration of Sagecloud's api",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Capiflex\\SageCloud\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Olarewaju Mojeed"
+        }
+    ],
+    "require": {}
+}
