@@ -24,8 +24,8 @@ class SageCloud implements SageCloudEndPoints
 
 
     protected string $accessToken;
-    protected string $tokenExpiresIn;
     public static string $cache_path = '';
+
 
     public function __construct(
         protected string $email,

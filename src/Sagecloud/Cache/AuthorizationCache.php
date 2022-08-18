@@ -68,8 +68,8 @@ abstract class AuthorizationCache
         if (is_array($tokens)) {
             $tokens[$clientEmail] = array(
                 'clientEmail' => $clientEmail,
-                'accessTokenEncrypted' => $accessToken,
-                'tokenExpiresIn' => $tokenExpiresIn
+                'accessToken' => $accessToken,
+                'expiresAt' => $tokenExpiresIn
             );
         }
         if (!file_put_contents($cachePath, json_encode($tokens))) {
