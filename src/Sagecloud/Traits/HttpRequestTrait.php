@@ -7,7 +7,6 @@ use Capiflex\SageCloud\Traits\AuthTokenCredentialTrait;
 
 trait HttpRequestTrait
 {
-    use AuthTokenCredentialTrait;
 
     protected function post(string $url, array $payload): array
     {
