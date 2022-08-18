@@ -12,5 +12,7 @@
             "name": "Olarewaju Mojeed"
         }
     ],
-    "require": {}
+    "require": {
+        "php" : ">=8.0"
+    }
 }
