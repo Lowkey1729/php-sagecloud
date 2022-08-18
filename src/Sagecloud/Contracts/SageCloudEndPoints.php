@@ -20,7 +20,7 @@ interface SageCloudEndPoints
 
     public const FETCH_CABLE_TV_PROVIDERS = '/cable-tv/fetch-providers';
     public const FETCH_CABLE_TV_BILLERS_FOR_PROVIDERS = '/v2/cable-tv/fetch-billers?type=';
-    public const VALIDATE_CABLE_TV_SMARTCARD = '/cable-tv/validate-customer';
+    public const VALIDATE_CABLETV_SMARTCARD = '/cable-tv/validate-customer';
     #public const FETCH_CABLETV_BILLERS_FOR_PROVIDERS = '/cable-tv/fetch-billers?type={service_type}';
     public const PURCHASE_CABLE_TV = '/cable-tv/purchase';
 

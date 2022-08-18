@@ -17,4 +17,10 @@ trait PowerTrait
         return $this->post($url, $params);
     }
 
+    public function fetchElectricityBillers(): array
+    {
+        $url = sprintf('%s%s', self::BASE_URL, self::FETCH_POWER_BILLERS);
+        return $this->get($url);
+    }
+
 }
