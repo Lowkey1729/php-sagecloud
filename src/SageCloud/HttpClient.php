@@ -16,7 +16,6 @@ class HttpClient
     {
         $response = array();
         $headers = self::$headers;
-        $request = json_encode($request);
 
         $curl = curl_init();
 

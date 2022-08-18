@@ -47,13 +47,8 @@ trait AuthTokenCredentialTrait
                 $access_token = $response['token']['access_token'];
                 $expires_at = $this->parseTime($response['token']['expires_at']);
                 AuthorizationCache::push($this->email,  $access_token, $expires_at);
-                $body = [
-                    'access_token' => $access_token,
-                    'expires_at' => $expires_at,
-                ];
 
-
-                $this->accessToken = $body['access_token'];
+                $this->accessToken = $access_token;
             }
 
         }
