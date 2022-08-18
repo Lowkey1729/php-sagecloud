@@ -1,9 +1,9 @@
 <?php
 
-namespace SageCloud\Traits;
+namespace SageCloud\SageCloud\Traits;
 
-use SageCloud\HttpClient;
-use SageCloud\Traits\AuthTokenCredentialTrait;
+use SageCloud\SageCloud\HttpClient;
+use SageCloud\SageCloud\Traits\AuthTokenCredentialTrait;
 
 trait HttpRequestTrait
 {

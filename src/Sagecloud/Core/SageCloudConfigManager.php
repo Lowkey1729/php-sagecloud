@@ -1,6 +1,6 @@
 <?php
 
-namespace SageCloud\Core;
+namespace SageCloud\SageCloud\SageCloud\Core;
 
 class SageCloudConfigManager
 {

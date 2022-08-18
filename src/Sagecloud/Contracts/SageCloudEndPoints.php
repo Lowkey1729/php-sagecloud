@@ -1,6 +1,6 @@
 <?php
 
-namespace SageCloud\Contracts;
+namespace SageCloud\SageCloud\Contracts;
 
 interface SageCloudEndPoints
 {

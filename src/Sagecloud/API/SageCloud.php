@@ -1,20 +1,20 @@
 <?php
 
-namespace SageCloud\API;
+namespace SageCloud\SageCloud\API;
 
-use SageCloud\Cache\AuthorizationCache;
-use SageCloud\Contracts\SageCloudEndPoints;
-use SageCloud\Traits\AirtimeTrait;
-use SageCloud\Traits\AuthTokenCredentialTrait;
-use SageCloud\Traits\BettingTrait;
-use SageCloud\Traits\CableTVTrait;
-use SageCloud\Traits\DataTrait;
-use SageCloud\Traits\EducationTrait;
-use SageCloud\Traits\HttpRequestTrait;
-use SageCloud\Traits\PowerTrait;
-use SageCloud\Traits\ReQueryTrait;
-use SageCloud\Traits\SharedDataTrait;
-use SageCloud\Traits\TransferTrait;
+use SageCloud\SageCloud\Cache\AuthorizationCache;
+use SageCloud\SageCloud\Contracts\SageCloudEndPoints;
+use SageCloud\SageCloud\Traits\AirtimeTrait;
+use SageCloud\SageCloud\Traits\AuthTokenCredentialTrait;
+use SageCloud\SageCloud\Traits\BettingTrait;
+use SageCloud\SageCloud\Traits\CableTVTrait;
+use SageCloud\SageCloud\Traits\DataTrait;
+use SageCloud\SageCloud\Traits\EducationTrait;
+use SageCloud\SageCloud\Traits\HttpRequestTrait;
+use SageCloud\SageCloud\Traits\PowerTrait;
+use SageCloud\SageCloud\Traits\ReQueryTrait;
+use SageCloud\SageCloud\Traits\SharedDataTrait;
+use SageCloud\SageCloud\Traits\TransferTrait;
 
 class SageCloud implements SageCloudEndPoints
 {
