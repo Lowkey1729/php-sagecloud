@@ -1,6 +1,6 @@
 <?php
 
-namespace Capiflex\SageCloud\API;
+namespace SageCloud\API;
 
 use Capiflex\SageCloud\Cache\AuthorizationCache;
 use Capiflex\SageCloud\Contracts\SageCloudEndPoints;

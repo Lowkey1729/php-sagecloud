@@ -1,6 +1,6 @@
 <?php
 
-namespace Capiflex\SageCloud\Cache;
+namespace SageCloud\Cache;
 
 use Capiflex\SageCloud\Core\SageCloudConfigManager;
 use Capiflex\SageCloud\Validators\JsonValidator;

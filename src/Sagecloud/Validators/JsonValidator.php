@@ -1,6 +1,6 @@
 <?php
 
-namespace Capiflex\SageCloud\Validators;
+namespace SageCloud\Validators;
 
 class JsonValidator
 {

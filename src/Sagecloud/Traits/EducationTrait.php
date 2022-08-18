@@ -1,6 +1,6 @@
 <?php
 
-namespace Capiflex\SageCloud\Traits;
+namespace SageCloud\Traits;
 
 trait EducationTrait
 {
