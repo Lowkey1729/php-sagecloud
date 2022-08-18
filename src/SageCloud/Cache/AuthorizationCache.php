@@ -8,7 +8,7 @@ use Exception;
 
 abstract class AuthorizationCache
 {
-    public static string $CACHE_PATH = '../../var/sage_auth.cache';
+    public static string $CACHE_PATH = '/../../../var/sage_auth.cache';
 
     /**
      * A pull method which would read the persisted data based on clientEmail.
