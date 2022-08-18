@@ -37,12 +37,13 @@ trait AuthTokenCredentialTrait
             'password' => $this->password,
         ]);
         $data = json_decode($res['RESPONSE_BODY'], true);
-        $response = $data['data'];
 
 
         if ($res['HTTP_CODE'] == 200) {
 
+
             if ($data['success']) {
+                $response = $data['data'];
                 $access_token = $response['token']['access_token'];
                 $expires_at = $this->parseTime($response['token']['expires_at']);
                 AuthorizationCache::push($this->email,  $access_token, $expires_at);
@@ -56,6 +57,7 @@ trait AuthTokenCredentialTrait
             }
 
         }
+
     }
 
     protected function parseTime($date): string

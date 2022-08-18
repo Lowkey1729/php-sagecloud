@@ -49,6 +49,7 @@ trait HttpRequestTrait
         return [
             'Content-Type: application/json',
             "Cache-Control: no-cache",
+            'Accept: application/json',
             "Authorization: Bearer " . $this->accessToken,
         ];
     }

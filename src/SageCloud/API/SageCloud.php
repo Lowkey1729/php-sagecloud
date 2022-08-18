@@ -23,7 +23,7 @@ class SageCloud implements SageCloudEndPoints
         CableTVTrait, PowerTrait, BettingTrait, ReQueryTrait;
 
 
-    protected string $accessToken;
+    protected string $accessToken = '';
 
     public function __construct(
         protected string $email,
