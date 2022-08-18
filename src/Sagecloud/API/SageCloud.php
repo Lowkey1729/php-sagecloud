@@ -2,6 +2,7 @@
 
 namespace Capiflex\SageCloud\API;
 
+use Capiflex\SageCloud\Cache\AuthorizationCache;
 use Capiflex\SageCloud\Contracts\SageCloudEndPoints;
 use Capiflex\SageCloud\Traits\AirtimeTrait;
 use Capiflex\SageCloud\Traits\AuthTokenCredentialTrait;
@@ -27,10 +28,25 @@ class SageCloud implements SageCloudEndPoints
     public static string $cache_path = '';
 
     public function __construct(
-        protected string $username,
+        protected string $email,
         protected string $password)
     {
+        //check for existing token in cache
 
+        $sageCloudKey = AuthorizationCache::pull($this->email);
+
+        if (empty($sageCloudKey)) {
+            $this->getToken();
+            return;
+        }
+
+        $expires_at = $this->parseTime($sageCloudKey['expires_at']);
+
+        if ($this->differenceInHours($expires_at) <= 2) {
+            $this->getToken();
+            return;
+        }
+        $this->accessToken = $sageCloudKey['access_token'];
     }
 
 

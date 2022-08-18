@@ -67,7 +67,7 @@ class HttpClient
         return $response;
     }
 
-    public static function withHeaders(array $headers): self
+    public static function withHeaders(array $headers = []): self
     {
         self::$headers = $headers;
         return new self;
