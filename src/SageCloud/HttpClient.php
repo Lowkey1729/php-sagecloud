@@ -58,8 +58,8 @@ class HttpClient
         }
 
 //      $json = json_decode($curl_response, true);
-        $response[\Constants::HTTP_CODE] = $info['http_code'];
-        $response[\Constants::RESPONSE_BODY] = $curl_response;
+        $response[Constants::HTTP_CODE] = $info['http_code'];
+        $response[Constants::RESPONSE_BODY] = $curl_response;
 
         //print_r($response);
         curl_close($curl);

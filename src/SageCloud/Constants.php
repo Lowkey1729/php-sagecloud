@@ -5,6 +5,7 @@
  *
  * @author Abiola.Adebanjo
  */
+namespace Capiflex\SageCloud;
 
 
 class Constants {
