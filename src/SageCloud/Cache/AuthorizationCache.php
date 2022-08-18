@@ -50,10 +50,6 @@ abstract class AuthorizationCache
      */
     public static function push($clientEmail, $accessToken, $tokenExpiresIn, string $config = null): void
     {
-        // Return if not enabled
-        if (!self::isEnabled($config)) {
-            return;
-        }
 
         $cachePath = self::cachePath($config);
         if (!is_dir(dirname($cachePath))) {
