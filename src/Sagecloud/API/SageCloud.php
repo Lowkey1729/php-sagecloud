@@ -2,19 +2,19 @@
 
 namespace SageCloud\API;
 
-use Capiflex\SageCloud\Cache\AuthorizationCache;
-use Capiflex\SageCloud\Contracts\SageCloudEndPoints;
-use Capiflex\SageCloud\Traits\AirtimeTrait;
-use Capiflex\SageCloud\Traits\AuthTokenCredentialTrait;
-use Capiflex\SageCloud\Traits\BettingTrait;
-use Capiflex\SageCloud\Traits\CableTVTrait;
-use Capiflex\SageCloud\Traits\DataTrait;
-use Capiflex\SageCloud\Traits\EducationTrait;
-use Capiflex\SageCloud\Traits\HttpRequestTrait;
-use Capiflex\SageCloud\Traits\PowerTrait;
-use Capiflex\SageCloud\Traits\ReQueryTrait;
-use Capiflex\SageCloud\Traits\SharedDataTrait;
-use Capiflex\SageCloud\Traits\TransferTrait;
+use SageCloud\Cache\AuthorizationCache;
+use SageCloud\Contracts\SageCloudEndPoints;
+use SageCloud\Traits\AirtimeTrait;
+use SageCloud\Traits\AuthTokenCredentialTrait;
+use SageCloud\Traits\BettingTrait;
+use SageCloud\Traits\CableTVTrait;
+use SageCloud\Traits\DataTrait;
+use SageCloud\Traits\EducationTrait;
+use SageCloud\Traits\HttpRequestTrait;
+use SageCloud\Traits\PowerTrait;
+use SageCloud\Traits\ReQueryTrait;
+use SageCloud\Traits\SharedDataTrait;
+use SageCloud\Traits\TransferTrait;
 
 class SageCloud implements SageCloudEndPoints
 {
