@@ -38,13 +38,13 @@ class SageCloud implements SageCloudEndPoints
             return;
         }
 
-        $expires_at = $this->parseTime($sageCloudKey['expires_at']);
+        $expires_at = $this->parseTime($sageCloudKey['expiresAt']);
 
         if ($this->differenceInHours($expires_at) <= 2) {
             $this->getToken();
             return;
         }
-        $this->accessToken = $sageCloudKey['access_token'];
+        $this->accessToken = $sageCloudKey['accessToken'];
     }
 
 
