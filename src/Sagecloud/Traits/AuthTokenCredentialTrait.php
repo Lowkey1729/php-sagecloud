@@ -1,16 +1,16 @@
 <?php
 
-namespace SageCloud\SageCloud\Traits;
+namespace Capiflex\SageCloud\Traits;
 
-use SageCloud\SageCloud\Cache\AuthorizationCache;
-use SageCloud\SageCloud\HttpClient;
+use Capiflex\SageCloud\Cache\AuthorizationCache;
+use Capiflex\SageCloud\HttpClient;
 
 trait AuthTokenCredentialTrait
 {
 
-    protected function getUsername(): string
+    protected function getEmail(): string
     {
-        return $this->username;
+        return $this->email;
     }
 
     protected function getPassword(): string

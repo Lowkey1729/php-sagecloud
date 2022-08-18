@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-namespace SageCloud\SageCloud;
+namespace Capiflex\SageCloud;
 
 class HttpClient
 {

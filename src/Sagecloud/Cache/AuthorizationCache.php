@@ -1,9 +1,9 @@
 <?php
 
-namespace SageCloud\SageCloud\Cache;
+namespace Capiflex\SageCloud\Cache;
 
-use SageCloud\SageCloud\Core\SageCloudConfigManager;
-use SageCloud\SageCloud\Validators\JsonValidator;
+use Capiflex\SageCloud\Core\SageCloudConfigManager;
+use Capiflex\SageCloud\Validators\JsonValidator;
 use Exception;
 
 abstract class AuthorizationCache

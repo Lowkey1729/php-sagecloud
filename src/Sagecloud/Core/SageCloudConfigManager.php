@@ -1,6 +1,6 @@
 <?php
 
-namespace SageCloud\SageCloud\SageCloud\Core;
+namespace Capiflex\SageCloud\Core;
 
 class SageCloudConfigManager
 {

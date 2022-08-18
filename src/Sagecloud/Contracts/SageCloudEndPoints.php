@@ -1,6 +1,6 @@
 <?php
 
-namespace SageCloud\SageCloud\Contracts;
+namespace Capiflex\SageCloud\Contracts;
 
 interface SageCloudEndPoints
 {

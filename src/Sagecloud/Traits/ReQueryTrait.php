@@ -1,6 +1,6 @@
 <?php
 
-namespace SageCloud\SageCloud\Traits;
+namespace Capiflex\SageCloud\Traits;
 
 
 trait ReQueryTrait
