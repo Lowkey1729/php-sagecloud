@@ -7,6 +7,7 @@ use Capiflex\SageCloud\HttpClient;
 
 trait AuthTokenCredentialTrait
 {
+    use HttpRequestTrait;
 
     protected function getEmail(): string
     {
@@ -31,8 +32,7 @@ trait AuthTokenCredentialTrait
     protected function getToken(): void
     {
         $url = static::BASE_URL . '/v2/merchant/authorization';
-        $http = new HttpClient();
-        $res = $http::send( 'POST', $url, [
+        $res = $this->httpClient()->send('POST', $url, [
             'email' => $this->email,
             'password' => $this->password,
         ]);
@@ -46,7 +46,7 @@ trait AuthTokenCredentialTrait
                 $response = $data['data'];
                 $access_token = $response['token']['access_token'];
                 $expires_at = $this->parseTime($response['token']['expires_at']);
-                AuthorizationCache::push($this->email,  $access_token, $expires_at);
+                AuthorizationCache::push($this->email, $access_token, $expires_at);
 
                 $this->accessToken = $access_token;
             }

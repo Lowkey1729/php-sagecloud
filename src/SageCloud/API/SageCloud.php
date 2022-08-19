@@ -18,7 +18,7 @@ use Capiflex\SageCloud\Traits\TransferTrait;
 
 class SageCloud implements SageCloudEndPoints
 {
-    use AuthTokenCredentialTrait, HttpRequestTrait, TransferTrait, DataTrait,
+    use AuthTokenCredentialTrait, TransferTrait, DataTrait,
         SharedDataTrait, AirtimeTrait, EducationTrait,
         CableTVTrait, PowerTrait, BettingTrait, ReQueryTrait;
 
