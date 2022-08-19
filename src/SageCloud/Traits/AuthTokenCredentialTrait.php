@@ -9,25 +9,6 @@ trait AuthTokenCredentialTrait
 {
     use HttpRequestTrait;
 
-    protected function getEmail(): string
-    {
-        return $this->email;
-    }
-
-    protected function getPassword(): string
-    {
-        return $this->password;
-    }
-
-    protected function getAccessToken(): self
-    {
-
-    }
-
-    protected function generateAccessToken(): self
-    {
-
-    }
 
     protected function getToken(): void
     {

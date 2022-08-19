@@ -26,9 +26,9 @@ trait HttpRequestTrait
         return $this->response($result);
     }
 
-    protected function get(string $url): array
+    protected function get(string $url, array $payload = []): array
     {
-        $result = $this->httpClient()->send('GET', $url, []);
+        $result = $this->httpClient()->send('GET', $url, $payload);
         return $this->response($result);
     }
 
