@@ -15,13 +15,13 @@ trait DataTrait
 
 
     /**
-     * @param array $params array<string, string> ['provider' => <string>]
+     * @param $provider
      * @return array
      */
-    public function fetchDataBundles(array $params): array
+    public function fetchDataBundles($provider): array
     {
-        $url = sprintf('%s%s', self::BASE_URL, self::FETCH_DATA_BUNDLES);
-        return $this->get($url, $params);
+        $url = sprintf('%s%s%s', self::BASE_URL, self::FETCH_DATA_BUNDLES, $provider);
+        return $this->get($url);
     }
 
 

@@ -8,7 +8,7 @@ interface SageCloudEndPoints
     public const PURCHASE_AIRTIME_URL = '/v2/airtime';
 
     public const FETCH_DATA_PROVIDERS = '/v2/internet/data/fetch-providers';
-    public const FETCH_DATA_BUNDLES = '/v2/internet/data/lookup';
+    public const FETCH_DATA_BUNDLES = '/v2/internet/data/lookup?provider=';
     public const PURCHASE_DATA = '/v2/internet/data';
 
     #public const SPECTRANET_PIN_LOOKUP = '/internet/data/spectranet/lookup';
