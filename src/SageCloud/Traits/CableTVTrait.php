@@ -4,6 +4,10 @@ namespace Capiflex\SageCloud\Traits;
 
 trait CableTVTrait
 {
+    /**
+     * @param $provider
+     * @return array
+     */
     public function fetchCableTVByBiller($provider): array
     {
         $url = sprintf('%s%s%s', self::BASE_URL, self::FETCH_CABLE_TV_BILLERS_FOR_PROVIDERS, $provider);
@@ -16,6 +20,12 @@ trait CableTVTrait
         return $this->get($url);
     }
 
+    /**
+     * @param array $params array<string string> [
+     * 'biller_id' => <int>,
+     * 'smartCardNo' => <string>,
+     * @return array
+     */
     public function validateSmartCard(array $params): array
     {
         $url = sprintf('%s%s', self::BASE_URL, self::VALIDATE_CABLETV_SMARTCARD);
