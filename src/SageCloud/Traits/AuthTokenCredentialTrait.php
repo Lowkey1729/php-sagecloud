@@ -28,7 +28,7 @@ trait AuthTokenCredentialTrait
 
     }
 
-    private function getToken(): void
+    protected function getToken(): void
     {
         $url = static::BASE_URL . '/v2/merchant/authorization';
         $http = new HttpClient();
