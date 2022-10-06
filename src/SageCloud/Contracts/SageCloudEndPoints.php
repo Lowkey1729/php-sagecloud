@@ -54,4 +54,8 @@ interface SageCloudEndPoints
     public const JAMB_PIN_PURCHASE = '/v2/education/jamb-pin-purchase';
 
     public const AUTHORIZATION = '/merchant/authorization';
+
+    public const GENERATE_VIRTUAL_ACCOUNT = '/v3/virtual-account/generate';
+    public const UPDATE_VIRTUAL_ACCOUNT = '/v3/virtual-account/update/';
+    public const DELETE_VIRTUAL_ACCOUNT = '/v3/virtual-account/delete/';
 }

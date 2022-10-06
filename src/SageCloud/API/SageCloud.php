@@ -15,19 +15,22 @@ use Capiflex\SageCloud\Traits\PowerTrait;
 use Capiflex\SageCloud\Traits\ReQueryTrait;
 use Capiflex\SageCloud\Traits\SharedDataTrait;
 use Capiflex\SageCloud\Traits\TransferTrait;
+use Capiflex\SageCloud\Traits\VirtualAccountTrait;
 
 class SageCloud implements SageCloudEndPoints
 {
     use AuthTokenCredentialTrait, TransferTrait, DataTrait,
         SharedDataTrait, AirtimeTrait, EducationTrait,
-        CableTVTrait, PowerTrait, BettingTrait, ReQueryTrait;
+        CableTVTrait, PowerTrait, BettingTrait, ReQueryTrait, VirtualAccountTrait;
 
 
     protected string $accessToken = '';
+    protected bool $isVersion3 = false;
 
     public function __construct(
-        protected string $email,
-        protected string $password)
+        protected string      $email,
+        protected string      $password,
+        protected string|null $secretKey = null)
     {
         //check for existing token in cache
 

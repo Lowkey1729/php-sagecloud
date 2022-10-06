@@ -18,7 +18,7 @@ composer require capiflex/php-sagecloud
 // Import the class namespaces first, before using it directly
 use SageCloud\API\SageCloud as SageCloudClient;
 
-$sageCloud = new SageCloudClient($email, $password);
+$sageCloud = new SageCloudClient($email, $password, $secretKey);
 
 //The email and password are your login credentials.
 ````
@@ -89,7 +89,9 @@ $sageCloud = new SageCloudClient($email, $password);
 ```php
     $sageCloud->fetchDataProviders();
 ```
+
 ### Purchase Data
+
 ```php
     $sageCloud->purchaseData([
         'reference' => 'test_package_32',
@@ -103,10 +105,13 @@ $sageCloud = new SageCloudClient($email, $password);
 # POWER
 
 ### Fetch Electricity Billers
+
 ```php
     $sageCloud->fetchElectricityBillers();
 ```
+
 ### Validate Meter
+
 ```php
  $sageCloud->validateMeter([
         'type' => 'ikeja_electric_prepaid',
@@ -115,6 +120,7 @@ $sageCloud = new SageCloudClient($email, $password);
 ```
 
 ### Purchase Power
+
 ```php
     $sageCloud->purchasePower([
         'reference' => 'test_package_90',
@@ -127,15 +133,21 @@ $sageCloud = new SageCloudClient($email, $password);
 ```
 
 # CABLE TV
+
 ### Fetch Cable Tv Providers
+
 ```php
     $sageCloud->fetchCableTvProviders();
 ```
+
 ### Fetch Cable TV Billers
+
 ```php
     $sageCloud->fetchCableTVByBiller('gotv');
 ```
+
 ### Purchase Cable TV
+
 ```php
     $sageCloud->purchaseCableTv([
         'reference' => 'test_package_987',
@@ -147,11 +159,15 @@ $sageCloud = new SageCloudClient($email, $password);
 ```
 
 # WAEC
+
 ### WAEC Lookup
+
 ```php
     $sageCloud->handleWAECLookup();
 ```
-### WAEC Purchase 
+
+### WAEC Purchase
+
 ```php
     $sageCloud->handleWAECPinPurchase([
         'amount' => '1800',
@@ -159,19 +175,26 @@ $sageCloud = new SageCloudClient($email, $password);
         'numberOfPin' => 1
     ]);
 ```
-# JAMB 
+
+# JAMB
+
 ### JAMB Lookup
+
 ```php
     $sageCloud->handleJAMBLookup();
 ```
+
 ### Profile Validation
+
 ```php
     $sageCloud->handleJAMBProfileValidation([
         'type' => 'DE',
         'profileCode' => '1234456667'
     ]);
 ```
+
 ### Pin Purchase
+
 ```php
     $sageCloud->handleJAMBPinPurchase([
         'amount' => '4000',
@@ -181,11 +204,15 @@ $sageCloud = new SageCloudClient($email, $password);
 ```
 
 # SME DATA
+
 ### Lookup
+
 ```php
     $sageCloud->handleSMEDataLookup();
 ```
+
 ### Purchase
+
 ```php
     $sageCloud->handleSMEDataPurchase([
         'service' => 'sme_data_500mb',
@@ -195,11 +222,15 @@ $sageCloud = new SageCloudClient($email, $password);
 ```
 
 # CORPORATE DATA
+
 ### Lookup
+
 ```php
     $sageCloud->handleCorporateDataLookup();
 ```
+
 ### Purchase
+
 ```php
     $sageCloud->handleCorporateDataPurchase([
         'service' => 'corporate_data_500mb',
@@ -209,18 +240,24 @@ $sageCloud = new SageCloudClient($email, $password);
 ```
 
 # BETTING
+
 ### Billers
+
 ```php
     $sageCloud->fetchBettingBillers();
 ```
+
 ### Validate Betting
+
 ```php
 $sageCloud->validateBetting([
         'type' => 'BetKing',
         'customerId' => '7352353'
     ]);
 ```
+
 ### Purchase
+
 ```php
     $sageCloud->fundBetting([
         'reference' => 'testing_package1',
@@ -229,6 +266,26 @@ $sageCloud->validateBetting([
         'name' => 'Test BetKing Account',
         'amount' => '100'
     ]);
+```
+
+# VIRTUAL ACCOUNT
+
+### Generate Virtual Account
+
+```php
+    $sageCloud->generateVirtualAccount();
+```
+
+### Delete Virtual Account
+
+```php
+$sageCloud->deleteVirtualAccount($accountNumber)
+```
+
+### Update Virtual Account
+
+```php
+    $sageCloud->updateVirtualAccount($accountNumber)
 ```
 
 

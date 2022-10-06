@@ -45,13 +45,21 @@ trait HttpRequestTrait
 
     protected function headers(): array
     {
-
-        return [
+        $headers = [
             'Content-Type: application/json',
             "Cache-Control: no-cache",
             'Accept: application/json',
-            "Authorization: Bearer " . $this->accessToken,
         ];
+        if ($this->isVersion3) {
+            $headers[] = [
+                "Authorization: " . $this->secretKey,
+            ];
+        } else {
+            $headers[] = [
+                "Authorization: Bearer " . $this->accessToken,
+            ];
+        }
+        return $headers;
     }
 
 }
