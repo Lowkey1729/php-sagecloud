@@ -16,7 +16,7 @@ composer require capiflex/php-sagecloud
 
 ```php
 // Import the class namespaces first, before using it directly
-use SageCloud\API\SageCloud as SageCloudClient;
+use Capiflex\SageCloud\API\SageCloud as SageCloudClient;
 
 $sageCloud = new SageCloudClient($email, $password, $secretKey);
 
