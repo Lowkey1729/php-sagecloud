@@ -273,7 +273,10 @@ $sageCloud->validateBetting([
 ### Generate Virtual Account
 
 ```php
-    $sageCloud->generateVirtualAccount();
+    $sageCloud->generateVirtualAccount([
+    'email' => 'olarewajumojeed@example.com',
+    'account_name' => 'Olarewaju Mojeed'
+]);
 ```
 
 ### Delete Virtual Account

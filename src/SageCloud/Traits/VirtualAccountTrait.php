@@ -4,11 +4,11 @@ namespace Capiflex\SageCloud\Traits;
 
 trait VirtualAccountTrait
 {
-    public function generateVirtualAccount(): array
+    public function generateVirtualAccount(array $params): array
     {
         $this->isVersion3 = true;
         $url = sprintf('%s%s', self::BASE_URL, self::GENERATE_VIRTUAL_ACCOUNT);
-        return $this->post($url, []);
+        return $this->post($url, $params);
     }
 
     public function deleteVirtualAccount(string $accountNumber): array
