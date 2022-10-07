@@ -32,8 +32,13 @@ class SageCloud implements SageCloudEndPoints
         protected string      $password,
         protected string|null $secretKey = null)
     {
-        //check for existing token in cache
+        //run this for version 3 api
+        if ($this->secretKey) {
+            $this->isVersion3 = true;
+            return;
+        }
 
+        //check for existing token in cache
         $sageCloudKey = AuthorizationCache::pull($this->email);
 
         if (empty($sageCloudKey)) {

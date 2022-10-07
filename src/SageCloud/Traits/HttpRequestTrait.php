@@ -51,13 +51,9 @@ trait HttpRequestTrait
             'Accept: application/json',
         ];
         if ($this->isVersion3) {
-            $headers[] = [
-                "Authorization: " . $this->secretKey,
-            ];
+            $headers[] = "Authorization: " . $this->secretKey;
         } else {
-            $headers[] = [
-                "Authorization: Bearer " . $this->accessToken,
-            ];
+            $headers[] = "Authorization: Bearer " . $this->accessToken;
         }
         return $headers;
     }
